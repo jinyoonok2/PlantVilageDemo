@@ -29,7 +29,6 @@ import androidx.preference.PreferenceManager;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.tensorflow.lite.DataType;
-import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.support.common.ops.NormalizeOp;
 import org.tensorflow.lite.support.image.ImageProcessor;
 import org.tensorflow.lite.support.image.TensorImage;
@@ -48,16 +47,11 @@ import edu.psu.plantvilagedemo.ml.Pvdemo;
 public class MainActivity extends AppCompatActivity {
 
     private PlantViewModel plantViewModel;
-    private Interpreter tflite;
-    private Button predictButton;
-    private static final String THEME_PREFERENCE = "theme_preference";
-    private static final String DARK_MODE_KEY = "dark_mode";
     private Uri selectedImageUri;
 
     Button predictBtn, captureBtn, viewPlantsButton;
     ImageView imageDisplay;
     Bitmap bitmap;
-    Plant plant = new Plant("plantName", "plantInformation", "plantPrescription");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageDisplay = findViewById(R.id.imageDisplay);
-        predictButton = findViewById(R.id.predictButton);
 
         // Restore the image URI from the saved instance state
         if (savedInstanceState != null) {
