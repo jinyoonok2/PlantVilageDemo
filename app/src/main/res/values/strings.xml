@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PlantVilageDemo</string>
+    <string name="title">Image Classify</string>
+    <string name="capturebtn">Captrue</string>
+    <string name="predictbtn">Predict</string>
+    <string name="selectbtn">Select Image</string>
+    <string name="pdbButton">Plant DB</string>
+    <string name="theme_switch_label">Dark mode</string>
+    <string name="action_settings">Settings</string>
+    <string name="settings_activity_title">Settings</string>
+    <string name="action_go_home">Go Home</string>
+    <string name="saved_theme_key">saved_theme</string>
+</resources>
